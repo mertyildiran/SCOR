@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  root 'page#home'
+
+  get 'page/home'
+
+  get 'page/about'
+
+  get 'page/faqs'
+
+  get 'page/contact'
+
   resources :articles
 
   get 'welcome/index'
@@ -8,7 +18,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  #root 'welcome#index'
 
   resources :articles do
 	  resources :comments
