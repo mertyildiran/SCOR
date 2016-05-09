@@ -8,23 +8,31 @@
 </head>
 <body>
 
-<% if user_signed_in? %>
-	<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<% else %>
-	<%= link_to "Sign In", new_user_session_path %>
-	<%= link_to "Sign Up", new_user_registration_path %>
-<% end %>
+<nav id="nav">
+	<div id="page_nav">
+		<%= link_to "Home", root_path %>
+		<%= link_to "Shop", products_path %>
+		<%= link_to "About", page_about_path %>
+		<%= link_to "FAQs", page_faqs_path %>
+		<%= link_to "Contact", page_contact_path %>
+	</div>
 
-<br><br>
-<%= link_to "Home", root_path %>
-<%= link_to "About", page_about_path %>
-<%= link_to "FAQs", page_faqs_path %>
-<%= link_to "Contact", page_contact_path %>
+	<div id="sign_in">
+		<% if user_signed_in? %>
+			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+		<% else %>
+			<%= link_to "Sign In", new_user_session_path %>
+			<%= link_to "Sign Up", new_user_registration_path %>
+		<% end %>
+	</div>
+</nav>
 
+<div id="main_wrap">
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 
-<%= yield %>
+	<%= yield %>
+</div>
 
 </body>
 </html>
