@@ -1,14 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<h2> Products under <%= @category.name %> category </h2>
+
+<br>
 
 <p>
-  <strong>Desc:</strong>
   <%= @category.desc %>
 </p>
+
+<br>
+
+<table>
+  <thead>
+	<tr>
+	  <th>Title</th>
+	  <th>Description</th>
+	  <th>Image</th>
+	  <th>Price</th>
+	  <th>Category</th>
+	  <th colspan="3"></th>
+	</tr>
+  </thead>
+
+  <tbody>
+	<% Product.where(category_id: @category.id).each do |product| %>
+	  <tr>
+		<td><%= product.title %></td>
+		<td><%= product.description %></td>
+		<td><%= image_tag product.photo.url(:small) %></td>
+		<td><%= number_to_currency(product.price, :unit => '$') %></td>
+		<td><%= link_to Category.find(product.category_id).name, category_path(product.category_id) %></td>
+		<td><%= link_to 'Show', product %></td>
+		<td><%= link_to 'Edit', edit_product_path(product) %></td>
+		<td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><a href="cart/<%= product.id %>">Add To Cart</a></td>
+	  </tr>
+	<% end %>
+  </tbody>
+</table>
+
+<br>
+
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

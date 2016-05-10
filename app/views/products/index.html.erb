@@ -2,6 +2,8 @@
 
 <h1>Listing Products</h1>
 
+<br>
+
 <table>
   <thead>
 	<tr>
@@ -21,7 +23,7 @@
 		<td><%= product.description %></td>
 		<td><%= image_tag product.photo.url(:small) %></td>
 		<td><%= number_to_currency(product.price, :unit => '$') %></td>
-		<td><%= product.category.name %></td>
+		<td><%= link_to Category.find(product.category_id).name, category_path(product.category_id) %></td>
 		<td><%= link_to 'Show', product %></td>
 		<td><%= link_to 'Edit', edit_product_path(product) %></td>
 		<td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
