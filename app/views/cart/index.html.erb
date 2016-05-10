@@ -15,6 +15,7 @@
 
 		<li>
 			<%= link_to product.title, product %>
+			<p><%= image_tag product.photo.url(:small) %></p>
 			<p><%= product.description %></p>
 			<p><%= number_to_currency(product.price, :unit => '$') %></p>
 			<p>Quantity: <%= quantity %></p>

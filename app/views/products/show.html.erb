@@ -11,8 +11,8 @@
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
+  <strong>Image:</strong>
+  <%= image_tag @product.photo.url(:small) %>
 </p>
 
 <p>

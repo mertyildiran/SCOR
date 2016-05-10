@@ -7,7 +7,7 @@
 	<tr>
 	  <th>Title</th>
 	  <th>Description</th>
-	  <th>Image url</th>
+	  <th>Image</th>
 	  <th>Price</th>
 	  <th>Category</th>
 	  <th>Subcategory</th>
@@ -20,7 +20,7 @@
 	  <tr>
 		<td><%= product.title %></td>
 		<td><%= product.description %></td>
-		<td><%= product.image_url %></td>
+		<td><%= image_tag product.photo.url(:small) %></td>
 		<td><%= product.price %></td>
 		<td><%= product.category %></td>
 		<td><%= product.subcategory %></td>
