@@ -2,7 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   #get 'cart/index'
-  resources :cart
+  #resources :cart
+  get 'cart' => 'cart#index'
+  get 'cart/clear' => 'cart#clearCart'
+  get 'cart/:id' => 'cart#add'
 
   resources :products
   root 'page#home'
