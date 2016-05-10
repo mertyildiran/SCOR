@@ -27,6 +27,14 @@
 	</div>
 </nav>
 
+<nav id="nav_cat">
+	<div id="nav_cat_helper">
+	<% @nav_cats.each do |category| %>
+		<%= link_to category.name, category %>
+	<% end %>
+	</div>
+</nav>
+
 <div id="main_wrap">
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
