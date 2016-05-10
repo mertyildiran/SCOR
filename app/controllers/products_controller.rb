@@ -4,7 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+	#@products = Product.all
 	@products = Product.all
+	if params[:search]
+	  @products = Product.search(params[:search]).order("created_at DESC")
+	else
+	  @products = Product.all.order('created_at DESC')
+	end
   end
 
   # GET /products/1

@@ -83,3 +83,11 @@ th {
 td {
 	padding: 0px 15px 0 15px;
 }
+
+#search_bar {
+	width: 100%;
+	height: 40px;
+	background: #fff;
+	float: letf;
+	text-align: center;
+}

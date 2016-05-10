@@ -1,8 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<div id="search_bar">
+	<%= form_tag(products_path, :method => "get", id: "search-form") do %>
+	<%= text_field_tag :search, params[:search], placeholder: "Search products" %>
+	<%= submit_tag "Search", :name => nil %>
+	<% end %>
+</div>
+
 <h1>Listing Products</h1>
 
 <br>
+
+<% if @products.present? %>
 
 <table>
   <thead>
@@ -32,6 +41,10 @@
 	<% end %>
   </tbody>
 </table>
+
+<% else %>
+	<p>There are no products containing the term(s) <%= params[:search] %>.</p>
+<% end %>
 
 <br>
 
