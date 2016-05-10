@@ -22,12 +22,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category %>
-</p>
-
-<p>
-  <strong>Subcategory:</strong>
-  <%= @product.subcategory %>
+  <%= @product.category.name %>
 </p>
 
 <%= social_share_button_tag(@product.title, :url => request.original_url, :image => root_url + @product.photo.url(:small), desc: @product.description, via: "SCOR") %>

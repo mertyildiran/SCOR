@@ -14,17 +14,21 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
+	#@product = Product.new
 	@product = Product.new
+	@categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /products/1/edit
   def edit
+	@categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # POST /products
   # POST /products.json
   def create
 	@product = Product.new(product_params)
+	@product.category_id = params[:category_id]
 
 	respond_to do |format|
 	  if @product.save
@@ -49,6 +53,7 @@ class ProductsController < ApplicationController
 		format.json { render json: @product.errors, status: :unprocessable_entity }
 	  end
 	end
+	@product.category_id = params[:category_id]
   end
 
   # DELETE /products/1
