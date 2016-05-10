@@ -30,5 +30,7 @@
   <%= @product.subcategory %>
 </p>
 
+<%= social_share_button_tag(@product.title, :url => request.original_url, :image => root_url + @product.photo.url(:small), desc: @product.description, via: "SCOR") %>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
