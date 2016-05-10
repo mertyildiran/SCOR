@@ -18,6 +18,7 @@
 	</div>
 
 	<div id="sign_in">
+		<span id="admin_notification">Browsing with Administrative Privileges</span>
 		<% if user_signed_in? %>
 			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 		<% else %>

@@ -91,3 +91,39 @@ td {
 	float: letf;
 	text-align: center;
 }
+
+form#search-form input#search {
+	padding:8px 15px;
+	background: #E3E3E3;
+	border:0px solid #dbdbdb;
+	width: 15%;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+form#search-form input#search:focus {
+	outline-width: 0;
+	width: 30%;
+}
+
+form#search-form input[type="submit"] {
+	position:relative;
+	padding:6px 15px;
+	left:-8px;
+	border:2px solid #ca051f;
+	background-color:#ca051f;
+	color:#fafafa;
+}
+
+form#search-form input[type="submit"]:hover  {
+	background-color:#fafafa;
+	color:#ca051f;
+}
+
+span#admin_notification {
+	height: 40px;
+	color: #ca051f;
+	padding: 0 20px 0 20px;
+	text-decoration: none;
+	font-style: italic;
+}

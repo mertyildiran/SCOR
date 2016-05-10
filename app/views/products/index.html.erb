@@ -43,7 +43,11 @@
 </table>
 
 <% else %>
-	<p>There are no products containing the term(s) <%= params[:search] %>.</p>
+	<% if params[:search].present? %>
+		<p>There are no products containing the term(s) <b><%= params[:search] %></b>.</p>
+	<% else %>
+		<p>There are no any products found in database.</p>
+	<% end %>
 <% end %>
 
 <br>
