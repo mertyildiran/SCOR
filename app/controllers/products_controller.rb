@@ -7,9 +7,9 @@ class ProductsController < ApplicationController
 	#@products = Product.all
 	@products = Product.all
 	if params[:search]
-	  @products = Product.search(params[:search]).order("created_at DESC")
+	  @products = Product.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 5)
 	else
-	  @products = Product.all.order('created_at DESC')
+	  @products = Product.all.order('created_at DESC').paginate(page: params[:page], per_page: 5)
 	end
   end
 

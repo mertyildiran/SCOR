@@ -66,7 +66,7 @@
 	background-color: #E3E3E3;
 }
 
-#nav_cat a:hover {
+#nav_cat a:hover, #page_nav a:hover, #sign_in a:hover {
 	color: #ca051f;
 }
 
@@ -118,11 +118,12 @@ form#search-form input[type="submit"] {
 form#search-form input[type="submit"]:hover  {
 	background-color:#fafafa;
 	color:#ca051f;
+	cursor: pointer;
 }
 
 span#admin_notification {
 	height: 40px;
-	color: #ca051f;
+	color: #7F7F7F;
 	padding: 0 20px 0 20px;
 	text-decoration: none;
 	font-style: italic;

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'seed_dump'
+gem 'will_paginate', '~> 3.1.0'
 gem 'social-share-button'
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'devise'

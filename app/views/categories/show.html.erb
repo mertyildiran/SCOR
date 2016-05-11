@@ -23,7 +23,7 @@
   </thead>
 
   <tbody>
-	<% Product.where(category_id: @category.id).each do |product| %>
+	<% Product.where(category_id: @category.id).order("created_at DESC").each do |product| %>
 	  <tr>
 		<td><%= product.title %></td>
 		<td><%= product.description %></td>
