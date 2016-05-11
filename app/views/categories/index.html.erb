@@ -3,27 +3,31 @@
 <h1>Listing Categories</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Desc</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Desc</th>
+			<th colspan="3"></th>
+		</tr>
+	</thead>
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= category.desc %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @categories.each do |category| %>
+			<tr>
+				<td><%= category.name %></td>
+				<td><%= category.desc %></td>
+				<td><%= link_to 'Show', category %></td>
+				<% if current_user.try(:admin?) %>
+					<td><%= link_to 'Edit', edit_category_path(category) %></td>
+					<td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Category', new_category_path %>
+<% if current_user.try(:admin?) %>
+	<%= link_to 'New Category', new_category_path %>
+<% end %>

@@ -1,31 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @product.title %>
+	<strong>Title:</strong>
+	<%= @product.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @product.description %>
+	<strong>Description:</strong>
+	<%= @product.description %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @product.photo.url(:original) %>
+	<strong>Image:</strong>
+	<%= image_tag @product.photo.url(:original) %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @product.price %>
+	<strong>Price:</strong>
+	<%= @product.price %>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @product.category.name %>
+	<strong>Category:</strong>
+	<%= @product.category.name %>
 </p>
 
 <%= social_share_button_tag(@product.title, :url => request.original_url, :image => root_url + @product.photo.url(:small), desc: @product.description, via: "SCOR") %>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
+<% if current_user.try(:admin?) %>
+	<%= link_to 'Edit', edit_product_path(@product) %> |
+<% end %>
 <%= link_to 'Back', products_path %>

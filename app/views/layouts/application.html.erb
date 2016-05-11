@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SCOR</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>SCOR</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
@@ -18,7 +18,10 @@
 	</div>
 
 	<div id="sign_in">
-		<span id="admin_notification">Browsing with Administrative Privileges</span>
+		<% if current_user.try(:admin?) %>
+			<span id="admin_notification">Browsing with Administrative Privileges</span>
+			<%= link_to "[ Admin Panel ]", rails_admin_path %>
+		<% end %>
 		<% if user_signed_in? %>
 			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 		<% else %>
@@ -30,10 +33,13 @@
 
 <nav id="nav_cat">
 	<div id="nav_cat_helper">
-	<% @nav_cats.each do |category| %>
-		<%= link_to category.name, category %>
+	<% if @nav_cats.any? %>
+		<% @nav_cats.each do |category| %>
+			<%= link_to category.name, category %>
+		<% end %>
+	<% else %>
+		<%= link_to "[ No Categories ]", rails_admin_path %>
 	<% end %>
-	<%= link_to "[Edit Categories]", categories_path %>
 	</div>
 </nav>
 

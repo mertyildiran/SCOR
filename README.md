@@ -4,7 +4,7 @@ Barebones of E-Commerce written on top of Ruby on Rails Framework
 
 ### Version
 
-0.3.9
+0.4.0
 
 ### Installation
 
@@ -21,7 +21,7 @@ Visit: [http://localhost:3000/](http://localhost:3000/)
 
 Create your first user using this form: [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up)
 
-After that, set first user as admin:
+After that, set first user as the admin:
 
 ```Shell
 rails console
