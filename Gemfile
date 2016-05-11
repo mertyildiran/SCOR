@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_admin'
 gem 'seed_dump'
 gem 'will_paginate', '~> 3.1.0'
 gem 'social-share-button'
