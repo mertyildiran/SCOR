@@ -6,7 +6,7 @@ Barebones of E-Commerce written on top of Ruby on Rails framework
 
 ### Version
 
-0.4.6
+0.4.8
 
 ### Installation
 
@@ -43,7 +43,23 @@ Now you are able to grant whoever you want with Administrative Privileges by che
 
 ### Demo
 
+Visit: [http://scor.dragon.computer/](http://scor.dragon.computer/)
+
+Standard User
+
+Email: **user@dragon.computer**
+Password **scoruser**
+
+Admin
+
+Email: **admin@dragon.computer**
+Password **scoradmin**
+
+For Admin Panel, visit: [http://scor.dragon.computer/admin](http://scor.dragon.computer/admin)
+
 ### Developer
+
+#### Database Autoloading
 
 Write current state of database to seed:
 
