@@ -1,10 +1,12 @@
 # SCOR
 
-Barebones of E-Commerce written on top of Ruby on Rails Framework
+Barebones of E-Commerce written on top of Ruby on Rails framework
+
+<p align="center"><img src="https://raw.githubusercontent.com/mertyildiran/SCOR/master/public/images/scor-logo.png"></p>
 
 ### Version
 
-0.4.1
+0.4.2
 
 ### Installation
 
