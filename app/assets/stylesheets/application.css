@@ -32,6 +32,7 @@
 	color: #fff;
 	padding: 0 20px 0 20px;
 	text-decoration: none;
+	background-color: #000;
 }
 
 #page_nav {
@@ -131,8 +132,8 @@ span#admin_notification {
 
 #cart-icon img {
 	height: 64px;
-	float:right;
-	margin: 0 60px 0 0;
+	float: right;
+	margin: 15px 15px 0 0;
 }
 
 #cart-icon img:hover {
@@ -140,4 +141,13 @@ span#admin_notification {
 	-webkit-transition: all 0.25s ease;
 	-webkit-filter: drop-shadow(0 0 5px #ca051f);
 	filter: url(shadow.svg#drop-shadow);
+}
+
+#cart-icon {
+	height: 100px;
+	width: 100px;
+	float: right;
+	border-radius: 25px;
+	margin: 0 40px 0 0;
+	background: #E3E3E3;
 }

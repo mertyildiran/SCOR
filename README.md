@@ -6,7 +6,7 @@ Barebones of E-Commerce written on top of Ruby on Rails framework
 
 ### Version
 
-0.4.2
+0.4.3
 
 ### Installation
 
@@ -40,6 +40,8 @@ Make sure you are logged in as admin and visit: [http://localhost:3000/admin](ht
 *Note: If you are not logged in to system you will get an exception which is extremely normal.*
 
 Now you are able to grant whoever you want with Administrative Privileges by checking Admin attribute: [http://localhost:3000/admin/user](http://localhost:3000/admin/user)
+
+### Demo
 
 ### Developer
 
