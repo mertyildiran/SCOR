@@ -1,0 +1,14 @@
+<div id="search_bar">
+	<%= form_tag(products_path, :method => "get", id: "search-form") do %>
+	<%= text_field_tag :search, params[:search], placeholder: "Search products" %>
+	<%= submit_tag "Search", :name => nil %>
+	<% end %>
+</div>
+
+<div id="cart-icon">
+	<% if @cart.empty? %>
+		<%= link_to image_tag("shopping_cart.png", :alt => "Cart is empty."), cart_path %>
+	<% else %>
+		<%= link_to image_tag("shopping_cart_accept.png", :alt => "Go to your cart."), cart_path %>
+	<% end %>
+</div>

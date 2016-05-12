@@ -11,6 +11,11 @@ class CategoriesController < ApplicationController
 	# GET /categories/1
 	# GET /categories/1.json
 	def show
+		if session[:cart] then
+			@cart = session[:cart]
+		else
+			@cart = {}
+		end
 	end
 
 	# GET /categories/new

@@ -12,6 +12,13 @@ class ProductsController < ApplicationController
 		else
 			@products = Product.all.order('created_at DESC').paginate(page: params[:page], per_page: 5)
 		end
+
+		if session[:cart] then
+			@cart = session[:cart]
+		else
+			@cart = {}
+		end
+		
 	end
 
 	# GET /products/1

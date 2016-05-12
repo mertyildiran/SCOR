@@ -88,7 +88,7 @@ td {
 	width: 100%;
 	height: 40px;
 	background: #fff;
-	float: letf;
+	float: left;
 	text-align: center;
 }
 
@@ -127,4 +127,17 @@ span#admin_notification {
 	padding: 0 20px 0 20px;
 	text-decoration: none;
 	font-style: italic;
+}
+
+#cart-icon img {
+	height: 64px;
+	float:right;
+	margin: 0 60px 0 0;
+}
+
+#cart-icon img:hover {
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease;
+	-webkit-filter: drop-shadow(0 0 5px #ca051f);
+	filter: url(shadow.svg#drop-shadow);
 }
