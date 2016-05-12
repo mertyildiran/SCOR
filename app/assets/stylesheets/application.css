@@ -122,6 +122,35 @@ form#search-form input[type="submit"]:hover  {
 	cursor: pointer;
 }
 
+form#search-form-home input#search {
+	padding:8px 15px;
+	background: #E3E3E3;
+	border:0px solid #dbdbdb;
+	width: 30%;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+form#search-form-home input#search:focus {
+	outline-width: 0;
+	width: 60%;
+}
+
+form#search-form-home input[type="submit"] {
+	position:relative;
+	padding:6px 15px;
+	left:-8px;
+	border:2px solid #ca051f;
+	background-color:#ca051f;
+	color:#fafafa;
+}
+
+form#search-form-home input[type="submit"]:hover  {
+	background-color:#fafafa;
+	color:#ca051f;
+	cursor: pointer;
+}
+
 span#admin_notification {
 	height: 40px;
 	color: #7F7F7F;
