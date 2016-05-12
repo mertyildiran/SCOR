@@ -1,9 +1,3 @@
-<div id="search_bar">
-	<%= form_tag(products_path, :method => "get", id: "search-form-home") do %>
-	<%= text_field_tag :search, params[:search], placeholder: "Search products" %>
-	<%= submit_tag "Search", :name => nil %>
-	<% end %>
-</div>
 
 <div id="nivo_wrapper">
 	<%= nivo_slider id: "slider" do %>
@@ -15,6 +9,25 @@
 		<%= image_tag "slider/6.jpg" %>
 	<% end %>
 </div>
+
+<div id="search_bar">
+	<%= form_tag(products_path, :method => "get", id: "search-form-home") do %>
+	<%= text_field_tag :search, params[:search], placeholder: "Search products" %>
+	<%= submit_tag "Search", :name => nil %>
+	<% end %>
+</div>
+
+<table style="margin: 0 auto;">
+	<tbody>
+		<tr>
+	<% Product.where(category_id: 2).order("created_at DESC").each do |product| %>
+		<td><%= link_to (image_tag product.photo.url(:small)), product %></td>
+	<% end %>
+		</tr>
+	</tbody>
+</table>
+
+
 
 
 <script>

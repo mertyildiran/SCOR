@@ -177,7 +177,7 @@ span#admin_notification {
 	height: 100px;
 	width: 100px;
 	float: right;
-	border-radius: 25px;
+	border-radius: 25px 0;
 	margin: 0 40px 0 0;
 	background: #E3E3E3;
 }
