@@ -1,3 +1,14 @@
 // Place all the styles related to the page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "nivo";
+
+#nivo_wrapper {
+	width: 100%;
+}
+
+.slide-wrapper {
+	width: 70%;
+	margin: 0 auto;
+}

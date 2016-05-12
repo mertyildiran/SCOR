@@ -4,3 +4,19 @@
 	<%= submit_tag "Search", :name => nil %>
 	<% end %>
 </div>
+
+<div id="nivo_wrapper">
+	<%= nivo_slider id: "slider" do %>
+		<%= image_tag "slider/1.jpg" %>
+		<%= image_tag "slider/2.jpg" %>
+		<%= image_tag "slider/3.jpg" %>
+		<%= image_tag "slider/4.jpg" %>
+		<%= image_tag "slider/5.jpg" %>
+		<%= image_tag "slider/6.jpg" %>
+	<% end %>
+</div>
+
+
+<script>
+	$('#slider').nivoSlider();
+</script>

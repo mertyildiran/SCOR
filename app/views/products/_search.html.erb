@@ -7,8 +7,8 @@
 
 <div id="cart-icon">
 	<% if @cart.empty? %>
-		<%= link_to image_tag("shopping_cart.png", :alt => "Cart is empty."), cart_path %>
+		<%= link_to image_tag("icons/shopping_cart.png", :alt => "Cart is empty."), cart_path %>
 	<% else %>
-		<%= link_to image_tag("shopping_cart_accept.png", :alt => "Go to your cart."), cart_path %>
+		<%= link_to image_tag("icons/shopping_cart_accept.png", :alt => "Go to your cart."), cart_path %>
 	<% end %>
 </div>
