@@ -1,13 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  price: 1
-  category: MyString
-
+  title: BIGBANG logo
+  description: Example product description
+  price: 23.0
+  photo_file_name: ra_unisex_tshirt_x1000_fafafa-ca443f4786_front-c_235_200_225_294-bg_f8f8f8_(7).jpg
+  photo_content_type: image/jpeg
+  photo_file_size: 8705
+  photo_updated_at: 2016-05-10 23:48:28
+  category_id:
 two:
-  title: MyString
-  description: MyText
-  price: 1
-  category: MyString
+  title: Foundation Logo
+  description: Example product description
+  price: 23.0
+  photo_file_name: ra_unisex_tshirt_x1000_fafafa-ca443f4786_front-c_235_200_225_294-bg_f8f8f8_(6).jpg
+  photo_content_type: image/jpeg
+  photo_file_size: 8687
+  photo_updated_at: 2016-05-10 23:50:15
+  category_id:

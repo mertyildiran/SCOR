@@ -6,7 +6,7 @@ Barebones of E-Commerce written on top of Ruby on Rails framework
 
 ### Version
 
-0.4.9
+0.5.0
 
 ### Installation
 
@@ -59,6 +59,8 @@ Password: **scoradmin**
 
 For Admin Panel, visit: [http://scor.dragon.computer/admin](http://scor.dragon.computer/admin)
 
+<br><br>
+
 ### Developer
 
 #### Database Autoloading
@@ -67,6 +69,12 @@ Write current state of database to seed:
 
 ```Shell
 rake db:seed:dump
+```
+
+After that, whenever you want autoload your dump:
+
+```Shell
+rake db:seed
 ```
 
 #### Rebuilding Your Database
