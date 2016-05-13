@@ -13,3 +13,13 @@ two:
   email: user2@example.com
   encrypted_password: password2
 #  column: value
+#
+standard:
+  email: user@dragon.computer
+  encrypted_password: scoruser
+#  column: value
+#
+admin:
+  email: admin@dragon.computer
+  encrypted_password: scoradmin
+#  column: value

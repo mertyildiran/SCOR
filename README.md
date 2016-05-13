@@ -6,7 +6,7 @@ Barebones of E-Commerce written on top of Ruby on Rails framework
 
 ### Version
 
-0.5.1
+0.5.2
 
 ### Installation
 
