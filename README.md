@@ -6,7 +6,7 @@ Barebones of E-Commerce written on top of Ruby on Rails framework
 
 ### Version
 
-0.5.0
+0.5.1
 
 ### Installation
 
@@ -37,9 +37,9 @@ exit
 
 Make sure you are logged in as admin and visit: [http://localhost:3000/admin](http://localhost:3000/admin)
 
-*Note: If you are not logged in to system you will get an exception which is extremely normal.*
+*Note: If you are not logged in to the system you will get an exception which is extremely normal.*
 
-Now you are able to grant whoever you want with Administrative Privileges by checking Admin attribute: [http://localhost:3000/admin/user](http://localhost:3000/admin/user)
+Now you are able to grant whoever you want with Administrative Privileges by marking as Admin: [http://localhost:3000/admin/user](http://localhost:3000/admin/user)
 
 ### Demo
 
@@ -77,7 +77,7 @@ After that, whenever you want autoload your dump:
 rake db:seed
 ```
 
-#### Rebuilding Your Database
+#### Rebuilding Your Database (for Testing)
 
 ```Shell
 rake db:drop:all
