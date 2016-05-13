@@ -6,7 +6,7 @@ Barebones of E-Commerce written on top of Ruby on Rails framework
 
 ### Version
 
-0.4.8
+0.4.9
 
 ### Installation
 
@@ -45,15 +45,17 @@ Now you are able to grant whoever you want with Administrative Privileges by che
 
 Visit: [http://scor.dragon.computer/](http://scor.dragon.computer/)
 
-Standard User
+**Standard User**
 
 Email: **user@dragon.computer**
-Password **scoruser**
 
-Admin
+Password: **scoruser**
+
+**Admin**
 
 Email: **admin@dragon.computer**
-Password **scoradmin**
+
+Password: **scoradmin**
 
 For Admin Panel, visit: [http://scor.dragon.computer/admin](http://scor.dragon.computer/admin)
 
@@ -65,4 +67,51 @@ Write current state of database to seed:
 
 ```Shell
 rake db:seed:dump
+```
+
+#### Rebuilding Your Database
+
+```Shell
+rake db:drop:all
+rake db:create:all
+rake db:migrate
+rake db:test:prepare
+```
+
+#### Testing
+
+##### Unit Tests
+
+```Shell
+rake test:units
+```
+
+##### Functional Tests
+
+```Shell
+rake test:functionals
+```
+
+##### Integration Tests
+
+```Shell
+rake test:integration
+```
+
+##### Benchmarking
+
+```Shell
+rake test:benchmark
+```
+
+##### Profiling
+
+```Shell
+rake test:profile
+```
+
+Alternatively, run all unit, functional and integration tests with profiling and benchmarking:
+
+```Shell
+rake test
 ```
