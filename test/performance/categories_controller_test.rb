@@ -16,4 +16,14 @@ class CategoriesControllerTest < ActionDispatch::PerformanceTest
     post '/categories', category: { desc: @category.desc, name: @category.name }
   end
 
+  test "updating a category" do
+    login_as(users(:admin))
+    patch '/categories/' + @category.id.to_s, category: { desc: @category.desc, name: @category.name }
+  end
+
+  test "destroying a category" do
+    login_as(users(:admin))
+    delete '/categories/' + @category.id.to_s
+  end
+
 end

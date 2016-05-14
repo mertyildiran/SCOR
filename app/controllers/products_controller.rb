@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
 		else
 			@cart = {}
 		end
-		
+
 	end
 
 	# GET /products/1
@@ -98,6 +98,6 @@ class ProductsController < ApplicationController
 
 	# Never trust parameters from the scary internet, only allow the white list through.
 	def product_params
-		params.require(:product).permit(:title, :description, :photo, :price, :category, :subcategory)
+		params.require(:product).permit(:title, :description, :photo, :price, :category_id)
 	end
 end

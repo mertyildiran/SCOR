@@ -6,7 +6,7 @@ Barebones of E-Commerce written on top of Ruby on Rails framework
 
 ### Version
 
-0.5.6
+0.5.7
 
 ### Installation
 
@@ -123,3 +123,5 @@ Alternatively, run all unit, functional and integration tests with profiling and
 ```Shell
 rake test
 ```
+
+**CAUTION:** Warnings can turn *stdout* to a mess. On that case use `RUBYOPT=W0` option. Example: `rake test:benchmark RUBYOPT=W0`

@@ -4,11 +4,6 @@ include Devise::TestHelpers
 class ProductsControllerTest < ActionController::TestCase
   setup do
     @product = products(:one)
-    @category = categories(:one)
-    post :create, category: { desc: @category.desc, name: @category.name }
-    #@category = Category.new({:name => "New T-Shirts", :desc => "Example category description"})
-    #@product.category_id = @category.id
-    #puts @category.id
   end
 
   test "should get index" do
@@ -25,8 +20,10 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should create product" do
     sign_in users(:admin)
+    image = fixture_file_upload "../../public/assets/products/1/original/" + @product.photo_file_name
+    image.content_type = @product.photo_content_type
     assert_difference('Product.count') do
-      post :create, product: { category_id: @product.category, description: @product.description, photo_content_type: @product.photo_content_type, photo_file_name: @product.photo_file_name, photo_file_size: @product.photo_file_size, photo_updated_at: @product.photo_updated_at, price: @product.price, title: @product.title }
+      post :create, product: { category_id: @product.category, description: @product.description, photo: image, price: @product.price, title: @product.title }
     end
 
     assert_redirected_to product_path(assigns(:product))

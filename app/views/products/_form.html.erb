@@ -29,7 +29,7 @@
   </div>
   <div class="field">
 	<%= f.label :category %><br>
-	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select one!") %>
+	<%= f.collection_select(:category_id, Category.all, :id, :name) %>
   </div>
   <div class="actions">
 	<%= f.submit %>
