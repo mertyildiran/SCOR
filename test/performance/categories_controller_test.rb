@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'rails/performance_test_help'
-include Devise::TestHelpers
+include Warden::Test::Helpers
 
 class CategoriesControllerTest < ActionDispatch::PerformanceTest
   # Refer to the documentation for all available options
@@ -9,12 +9,11 @@ class CategoriesControllerTest < ActionDispatch::PerformanceTest
 
   setup do
     @category = categories(:one)
-    sign_in users(:admin)
   end
 
   test "creating new category" do
-    #post :create, category: { desc: @category.desc, name: @category.name }
-    post '/categories', :post => { :desc => @category.desc, :name => @category.name }
+    login_as(users(:admin))
+    post '/categories', category: { desc: @category.desc, name: @category.name }
   end
 
 end

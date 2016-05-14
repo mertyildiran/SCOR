@@ -8,7 +8,7 @@ one:
   photo_content_type: image/jpeg
   photo_file_size: 8705
   photo_updated_at: 2016-05-10 23:48:28
-  category_id: 1
+  category: one
 two:
   title: Foundation Logo
   description: Example product description
@@ -17,4 +17,4 @@ two:
   photo_content_type: image/jpeg
   photo_file_size: 8687
   photo_updated_at: 2016-05-10 23:50:15
-  category_id: 1
+  category: one
