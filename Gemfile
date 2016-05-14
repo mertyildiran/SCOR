@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'ruby-prof'
+gem 'rails-perftest'
 gem 'nivo-rails'
 gem 'rails_admin'
 gem 'seed_dump'
