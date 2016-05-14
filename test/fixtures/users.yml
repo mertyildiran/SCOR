@@ -16,10 +16,10 @@ two:
 #
 standard:
   email: user@dragon.computer
-  encrypted_password: scoruser
+  encrypted_password: $2a$10$/FvY0q6VaWKuaoF9rnpWIuPX65YMu7qQii6.CZn5oN5/eFnqFTvsy
 #  column: value
 #
 admin:
   email: admin@dragon.computer
-  encrypted_password: scoradmin
+  encrypted_password: $2a$10$6VIp0YI69icIhJBk/J6WqOu3USO49R7hMBJ/FLZQvAr6mODVbVrAO
 #  column: value

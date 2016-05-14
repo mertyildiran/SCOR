@@ -8,9 +8,8 @@ class CategoriesControllerTest < ActionDispatch::PerformanceTest
   #                          output: 'tmp/performance', formats: [:flat] }
 
   setup do
-    load "#{Rails.root}/db/test-seeds.rb"
     @category = categories(:one)
-    sign_in User.first
+    sign_in users(:admin)
   end
 
   test "creating new category" do
