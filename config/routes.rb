@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :subcategories
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :categories
   devise_for :users
