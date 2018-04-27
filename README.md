@@ -1,8 +1,17 @@
 # SCOR
 
+<img src="https://raw.githubusercontent.com/mertyildiran/SCOR/master/public/images/scor-logo.png" align="right" height="24px"/>
+
 Barebones of E-Commerce written on top of Ruby on Rails framework
 
-<p align="center"><img src="https://raw.githubusercontent.com/mertyildiran/SCOR/master/public/images/scor-logo.png"></p>
+<p align="center">
+  <img src="http://i.imgur.com/JAWjmTu.png" alt="Screenshot 1" height="200px"/>
+  <img src="http://i.imgur.com/kID5Te5.png" alt="Screenshot 2" height="200px"/>
+</p>
+<p align="center">
+  <img src="http://i.imgur.com/8oC2Qpd.png" alt="Screenshot 3" height="200px"/>
+  <img src="http://i.imgur.com/fGlOMhs.png" alt="Screenshot 4" height="200px"/>
+</p>
 
 ### Version
 
@@ -40,24 +49,6 @@ Make sure you are logged in as admin and visit: [http://localhost:3000/admin](ht
 *Note: If you are not logged in to the system you will get an exception which is extremely normal.*
 
 Now you are able to grant whoever you want with Administrative Privileges by marking as Admin: [http://localhost:3000/admin/user](http://localhost:3000/admin/user)
-
-### Demo
-
-Visit: [http://scor.dragon.computer/](http://scor.dragon.computer/)
-
-**Standard User**
-
-Email: **user@dragon.computer**
-
-Password: **scoruser**
-
-**Admin**
-
-Email: **admin@dragon.computer**
-
-Password: **scoradmin**
-
-For Admin Panel, visit: [http://scor.dragon.computer/admin](http://scor.dragon.computer/admin)
 
 <br><br>
 
